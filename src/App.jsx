@@ -59,7 +59,12 @@ function App() {
       </header>
       <Cards photos={photos} setPhotoModal={setPhotoModal} />
       {photoModal && (
-        <PhotoModal photo={photoModal} setPhotoModal={setPhotoModal} />
+        <PhotoModal 
+          photo={photoModal.photo} 
+          setPhotoModal={setPhotoModal}
+          photos={photos}
+          currentIndex={photoModal.index}
+        />
       )}
     </main>
   );
